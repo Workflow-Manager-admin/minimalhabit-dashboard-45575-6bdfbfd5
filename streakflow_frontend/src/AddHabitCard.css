@@ -1,11 +1,13 @@
 :root {
-  --habit-primary: #a8dadc;
-  --habit-secondary: #fbc4ab;
-  --habit-accent: #ffd6a5;
-  --card-shadow: 0 4px 24px 0 rgba(60, 80, 108, 0.10);
+  --habit-primary: #a3d5ff;
+  --habit-secondary: #e4ecf7; /* accent pastel */
+  --habit-accent: #f2f6f9;
+  --card-shadow: 0 4px 24px 0 rgba(60, 80, 108, 0.13);
   --card-radius: 16px;
-  --card-width: 300px;
+  --card-width: 350px;
   --navbar-height: 60px;
+  --spacing: 20px;
+  --fade-time: 0.66s;
 }
 
 .add-habit-card-outer {
@@ -20,96 +22,121 @@
 
 .add-habit-card {
   background: linear-gradient(
-    136deg,
-    var(--habit-primary) 0%,
-    var(--habit-secondary) 75%,
-    var(--habit-accent) 100%
+    138deg,
+    var(--habit-primary) 60%,
+    var(--habit-secondary) 100%
   );
   width: var(--card-width);
   border-radius: var(--card-radius);
   box-shadow: var(--card-shadow);
-  padding: 28px 28px 22px 28px;
+  padding: var(--spacing);
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  gap: 10px;
-  transition: box-shadow 0.15s;
+  gap: var(--spacing);
+  transition: box-shadow 0.17s;
+  opacity: 0;
+  animation: fadeInCard var(--fade-time) cubic-bezier(0.4,0.8,0.3,1.01) forwards;
+}
+
+@keyframes fadeInCard {
+  from { opacity: 0; transform: translateY(40px);}
+  to { opacity: 1; transform: none;}
 }
 
 .add-habit-card:hover {
-  box-shadow: 0 8px 32px 0 rgba(60, 80, 108, 0.16);
+  box-shadow: 0 8px 32px 0 rgba(60, 80, 108, 0.19);
 }
 
 .add-habit-title {
   margin: 0 0 14px 0;
   text-align: center;
-  font-size: 1.25rem;
-  font-weight: 600;
-  color: #2C3642;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #253047;
   letter-spacing: 0.2px;
 }
 
 .add-habit-form {
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: var(--spacing);
 }
 
 .form-group {
   display: flex;
   flex-direction: column;
-  gap: 7px;
+  gap: 9px;
 }
 
 .form-label {
-  font-size: 0.97rem;
+  font-size: 1.05rem;
   font-weight: 500;
-  color: #344a5e;
+  color: #253047;
   margin-bottom: 1px;
 }
 
 .form-input {
   border: none;
   outline: none;
-  background: rgba(255,255,255,0.86);
-  border-radius: 6px;
-  padding: 8px 12px;
+  background: #ffffffee;
+  border-radius: var(--card-radius);
+  padding: 13px 16px;
   font-size: 1rem;
   color: #21313c;
   box-shadow: 0 0.5px 2.5px 0 rgba(60,80,120,0.07);
-  transition: box-shadow 0.11s, background 0.14s;
+  transition: box-shadow 0.13s, background 0.16s;
 }
 
 .form-input:focus {
-  background: #ffe4ec;
-  box-shadow: 0 1.5px 8px 0 rgba(245, 180, 185, 0.14);
+  background: #e4ecf7;
+  box-shadow: 0 3px 18px 0 rgba(100,160,220,0.11);
 }
 
 .add-habit-btn {
-  margin-top: 8px;
+  margin-top: 3px;
   width: 100%;
-  background: linear-gradient(90deg, #ffb4a2 55%, #ffd6a5 100%);
-  color: #212529;
+  background: linear-gradient(90deg, #a3d5ff 30%, #e4ecf7 100%);
+  color: #324049;
   border: none;
-  border-radius: 8px;
-  padding: 12px 0;
-  font-size: 1.1rem;
-  font-weight: bold;
+  border-radius: var(--card-radius);
+  padding: 16px 0;
+  font-size: 1.09rem;
+  font-weight: 600;
+  font-family: 'Poppins', 'Inter', sans-serif;
   cursor: pointer;
-  box-shadow: 0 1px 6px 0 rgba(242, 163, 115, 0.08);
-  transition: background 0.13s, color 0.11s;
+  box-shadow: 0 1px 6px 0 rgba(163, 213, 255, 0.09);
+  letter-spacing: 0.03em;
+  transition: background 0.14s, color 0.13s, box-shadow 0.14s;
 }
 
 .add-habit-btn:hover, .add-habit-btn:focus {
-  background: linear-gradient(90deg, #ffd6a5 60%, #ffc6d0 100%);
-  color: #364049;
+  background: linear-gradient(90deg, #e4ecf7 56%, #f2f6f9 100%);
+  color: #4075ac;
+  box-shadow: 0 3px 17px 0 rgba(60,80,140,0.10);
 }
 
-/* Responsive (optional/minimal) */
-@media (max-width: 450px) {
+/* Fade in for checkboxes in card */
+.add-habit-card input[type="checkbox"] {
+  accent-color: #a3d5ff;
+  width: 26px; height: 26px;
+  border-radius: 12px;
+  box-shadow: 0 1.5px 6px 0 rgba(120,188,255,0.05);
+  animation: fadeInCheckbox 0.7s ease-in forwards;
+  opacity: 0;
+}
+
+@keyframes fadeInCheckbox {
+  from { opacity: 0; transform: scale(0.93);}
+  to { opacity: 1; transform: none;}
+}
+
+/* Responsive */
+@media (max-width: 550px) {
   .add-habit-card {
-    width: 97vw;
+    width: 98vw;
     min-width: 0;
-    padding: 16px 4vw 12px 4vw;
+    padding: 6vw 2vw 4vw 2vw;
+    border-radius: 6vw;
   }
 }

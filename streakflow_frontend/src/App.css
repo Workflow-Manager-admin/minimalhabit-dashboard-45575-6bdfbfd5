@@ -1,18 +1,26 @@
 :root {
-  --base-light: #00ffff;
-  --base-dark: #00008b;
-  --text-color: #ffffff;
-  --text-secondary: rgba(255, 255, 255, 0.7);
-  --border-color: rgba(255, 255, 255, 0.1);
+  --pastel-bg: #f2f6f9;
+  --pastel-card: #ffffff;
+  --pastel-accent: #a3d5ff;
+  --pastel-secondary: #e4ecf7;
+  --text-color: #253047;
+  --text-secondary: #789;
+  --border-color: #e4ecf7;
+  --shadow-soft: 0 4px 24px 0 rgba(60,80,108,0.14);
+  --radius: 16px;
+  --container-max: 940px;
+  --spacing: 20px;
 }
 
 body {
   margin: 0;
-  font-family: 'Inter', 'Roboto', 'Helvetica', 'Arial', sans-serif;
-  background-color: var(--base-dark);
+  font-family: 'Poppins', 'Inter', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+  background: var(--pastel-bg);
   color: var(--text-color);
+  font-size: 16px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
 }
 
 .app {

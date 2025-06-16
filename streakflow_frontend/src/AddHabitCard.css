@@ -1,0 +1,115 @@
+:root {
+  --habit-primary: #a8dadc;
+  --habit-secondary: #fbc4ab;
+  --habit-accent: #ffd6a5;
+  --card-shadow: 0 4px 24px 0 rgba(60, 80, 108, 0.10);
+  --card-radius: 16px;
+  --card-width: 300px;
+  --navbar-height: 60px;
+}
+
+.add-habit-card-outer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: calc(100vh - var(--navbar-height));
+  padding-top: 96px; /* Space from navbar */
+  box-sizing: border-box;
+  background: transparent;
+}
+
+.add-habit-card {
+  background: linear-gradient(
+    136deg,
+    var(--habit-primary) 0%,
+    var(--habit-secondary) 75%,
+    var(--habit-accent) 100%
+  );
+  width: var(--card-width);
+  border-radius: var(--card-radius);
+  box-shadow: var(--card-shadow);
+  padding: 28px 28px 22px 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 10px;
+  transition: box-shadow 0.15s;
+}
+
+.add-habit-card:hover {
+  box-shadow: 0 8px 32px 0 rgba(60, 80, 108, 0.16);
+}
+
+.add-habit-title {
+  margin: 0 0 14px 0;
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #2C3642;
+  letter-spacing: 0.2px;
+}
+
+.add-habit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.form-label {
+  font-size: 0.97rem;
+  font-weight: 500;
+  color: #344a5e;
+  margin-bottom: 1px;
+}
+
+.form-input {
+  border: none;
+  outline: none;
+  background: rgba(255,255,255,0.86);
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-size: 1rem;
+  color: #21313c;
+  box-shadow: 0 0.5px 2.5px 0 rgba(60,80,120,0.07);
+  transition: box-shadow 0.11s, background 0.14s;
+}
+
+.form-input:focus {
+  background: #ffe4ec;
+  box-shadow: 0 1.5px 8px 0 rgba(245, 180, 185, 0.14);
+}
+
+.add-habit-btn {
+  margin-top: 8px;
+  width: 100%;
+  background: linear-gradient(90deg, #ffb4a2 55%, #ffd6a5 100%);
+  color: #212529;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 0;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 1px 6px 0 rgba(242, 163, 115, 0.08);
+  transition: background 0.13s, color 0.11s;
+}
+
+.add-habit-btn:hover, .add-habit-btn:focus {
+  background: linear-gradient(90deg, #ffd6a5 60%, #ffc6d0 100%);
+  color: #364049;
+}
+
+/* Responsive (optional/minimal) */
+@media (max-width: 450px) {
+  .add-habit-card {
+    width: 97vw;
+    min-width: 0;
+    padding: 16px 4vw 12px 4vw;
+  }
+}

@@ -23,8 +23,19 @@ modules by path ./.ve/ 15.1 KiB
     ./.ve/EditorOverlay.css 2.25 KiB [built] [code generated]
     ./node_modules/css-loader/dist/cjs.js!./.ve/EditorOverlay.css 697 bytes [built] [code generated]
   ./.ve/EditorOverlay.jsx 1.58 KiB [built] [code generated]
-webpack 5.99.9 compiled successfully in 1335 ms
-assets by status 1.41 MiB [cached] 1 asset
-asset index.html 1.92 KiB [emitted]
-cached modules 1.27 MiB (javascript) 27.5 KiB (runtime) [cached] 59 modules
-webpack 5.99.9 compiled successfully in 89 ms
+webpack 5.99.9 compiled successfully in 1262 ms
+assets by status 1.92 KiB [cached] 1 asset
+assets by path *.js 1.45 MiB
+  asset bundle.js 1.43 MiB [emitted] (name: main)
+  asset main.89d3e5073b899b37c641.hot-update.js 24.5 KiB [emitted] [immutable] [hmr] (name: main)
+asset main.89d3e5073b899b37c641.hot-update.json 28 bytes [emitted] [immutable] [hmr]
+Entrypoint main 1.45 MiB = bundle.js 1.43 MiB main.89d3e5073b899b37c641.hot-update.js 24.5 KiB
+cached modules 1.27 MiB [cached] 44 modules
+runtime modules 27.5 KiB 14 modules
+javascript modules 12.5 KiB
+  modules by path ./src/*.css 6.1 KiB
+    ./src/CalendarSection.css 2.26 KiB [built] [code generated]
+    ./node_modules/css-loader/dist/cjs.js!./src/CalendarSection.css 3.84 KiB [built] [code generated]
+  ./src/App.js 1.7 KiB [built] [code generated]
+  ./src/CalendarSection.jsx 4.74 KiB [built] [code generated]
+webpack 5.99.9 compiled successfully in 110 ms

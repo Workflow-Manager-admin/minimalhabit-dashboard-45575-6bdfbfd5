@@ -1,0 +1,54 @@
+:root {
+  --progressbar-gradient: linear-gradient(90deg, #a8dadc 25%, #fbc4ab 88%, #ffd6a5 100%);
+  --progressbar-bg: #eef8fa;
+  --progressbar-height: 13px;
+  --progressbar-radius: 8px;
+  --progressbar-label-color: #2b3240;
+  --progressbar-shadow: 0 1px 5px 0 rgba(170, 200, 205, 0.09);
+}
+
+.streak-progressbar-outer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 8px;
+  margin-bottom: 2px;
+}
+
+.streak-progressbar-bar-bg {
+  flex: 1 1 0%;
+  background: var(--progressbar-bg);
+  border-radius: var(--progressbar-radius);
+  height: var(--progressbar-height);
+  overflow: hidden;
+  box-shadow: var(--progressbar-shadow);
+  position: relative;
+}
+
+.streak-progressbar-bar-fill {
+  position: absolute;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: var(--progressbar-gradient);
+  transition: width 0.7s cubic-bezier(0.42,0,0.58,1);
+  border-radius: var(--progressbar-radius) 0 0 var(--progressbar-radius);
+  /* Add subtle ripple shine over the filled bar */
+  /* Uncomment if you want shine:
+  mask-image: linear-gradient(120deg, transparent 5%, white 30%, transparent 95%);
+  */
+}
+
+.streak-progressbar-label {
+  flex-shrink: 0;
+  color: var(--progressbar-label-color);
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  padding-left: 9px;
+  opacity: 0.82;
+  user-select: none;
+  min-width: 74px;
+  text-align: right;
+}

@@ -7,35 +7,17 @@
 <i> [webpack-dev-server] On Your Network (IPv4): http://172.17.0.2:3000/
 <i> [webpack-dev-server] Content not from webpack is served from './public' directory
 Injecting EditorRootWrapper import: ../.ve/EditorRootWrapper
-asset bundle.js 1.41 MiB [emitted] (name: main)
+asset bundle.js 1.43 MiB [emitted] (name: main)
 asset index.html 1.92 KiB [emitted]
 runtime modules 27.5 KiB 14 modules
-modules by path ./node_modules/ 1.24 MiB 31 modules
-modules by path ./src/ 15.6 KiB
-  modules by path ./src/*.css 11.3 KiB 6 modules
-  modules by path ./src/*.js 2.05 KiB
-    ./src/index.js 530 bytes [built] [code generated]
-    ./src/App.js 1.54 KiB [built] [code generated]
-  ./src/Navbar.jsx 2.25 KiB [built] [code generated]
-modules by path ./.ve/ 15.1 KiB
-  modules by path ./.ve/*.js 10.6 KiB 2 modules
-  modules by path ./.ve/*.css 2.93 KiB
-    ./.ve/EditorOverlay.css 2.25 KiB [built] [code generated]
-    ./node_modules/css-loader/dist/cjs.js!./.ve/EditorOverlay.css 697 bytes [built] [code generated]
-  ./.ve/EditorOverlay.jsx 1.58 KiB [built] [code generated]
-webpack 5.99.9 compiled successfully in 1262 ms
-assets by status 1.92 KiB [cached] 1 asset
-assets by path *.js 1.45 MiB
-  asset bundle.js 1.43 MiB [emitted] (name: main)
-  asset main.89d3e5073b899b37c641.hot-update.js 24.5 KiB [emitted] [immutable] [hmr] (name: main)
-asset main.89d3e5073b899b37c641.hot-update.json 28 bytes [emitted] [immutable] [hmr]
-Entrypoint main 1.45 MiB = bundle.js 1.43 MiB main.89d3e5073b899b37c641.hot-update.js 24.5 KiB
-cached modules 1.27 MiB [cached] 44 modules
-runtime modules 27.5 KiB 14 modules
-javascript modules 12.5 KiB
-  modules by path ./src/*.css 6.1 KiB
-    ./src/CalendarSection.css 2.26 KiB [built] [code generated]
-    ./node_modules/css-loader/dist/cjs.js!./src/CalendarSection.css 3.84 KiB [built] [code generated]
-  ./src/App.js 1.7 KiB [built] [code generated]
-  ./src/CalendarSection.jsx 4.74 KiB [built] [code generated]
-webpack 5.99.9 compiled successfully in 110 ms
+cacheable modules 1.28 MiB
+  modules by path ./node_modules/ 1.24 MiB 31 modules
+  modules by path ./src/ 26.7 KiB
+    modules by path ./src/*.css 17.4 KiB 8 modules
+    modules by path ./src/*.js 2.22 KiB 2 modules
+    modules by path ./src/*.jsx 6.99 KiB 2 modules
+  modules by path ./.ve/ 15.1 KiB
+    modules by path ./.ve/*.js 10.6 KiB 2 modules
+    modules by path ./.ve/*.css 2.93 KiB 2 modules
+    ./.ve/EditorOverlay.jsx 1.58 KiB [built] [code generated]
+webpack 5.99.9 compiled successfully in 1367 ms

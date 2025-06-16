@@ -1,5 +1,6 @@
 import React from 'react';
 import './AddHabitCard.css';
+import StreakProgressBar from './StreakProgressBar';
 
 /**
  * PUBLIC_INTERFACE
@@ -53,6 +54,9 @@ const AddHabitCard = () => {
             Add Habit
           </button>
         </form>
+        {/* ---- Progress Bar for current streak (demo 4/21 days) ---- */}
+        <StreakProgressBar completedDays={4} goalDays={21} />
+        {/* In a real dashboard, pass current habit's streak stats */}
       </div>
     </div>
   );
